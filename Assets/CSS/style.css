@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Roboto-Regular.eot); /* For IE6-8 */
+    src: local('Roboto'),
+        local('Roboto-Regular'),
+        url(../fonts/Roboto-Regular.woff2) format('woff2'),
+        url(../fonts/Roboto-Regular.woff) format('woff'),
+        url(../fonts/Roboto-Regular.ttf) format('truetype');
+}
+
+body {
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+    background-image: url(/Assets/photos/tile.jpg);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    min-height: 100vh;
+}
+
+#grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 800px; 
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px; 
+    margin: 20px;
+}
+
+header {
+    font-size: 28px; 
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#notebook {
+    width: 100%;
+    padding: 20px;
+    background-image: url(/Assets/photos/formbg.jpg);
+    border: 1px solid #a0522d;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#tasksForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    width: 100%; 
+}
+
+#tasksForm textarea,
+#tasksForm input {
+    width: 100%;
+    padding: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#tasksForm button {
+    padding: 15px; 
+    border: none;
+    border-radius: 4px;
+    font-size: 16px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#tasksForm button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#tasksForm button[type="reset"] {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+#tasksForm button:hover {
+    opacity: 0.9;
+}
+
+#tasks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 90%; 
+    max-width: 1200px; 
+    margin-top: 20px; 
+    padding: 20px;
+}
+
+.task {
+    background-image: url(/Assets/photos/notebg.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px; 
+    height: 250px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 5px; 
+    right: 5px; 
+    font-size: 20px; 
+    color: red; 
+    cursor: pointer;
+    display: none;
+    transition: transform 0.2s ease-in-out; 
+}
+
+.task:hover .delete-icon {
+    display: block; 
+}
+
+.delete-icon:hover {
+    transform: scale(1.2); 
+}
+
+.task:hover {
+    transform: translateY(-5px); 
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    #grid {
+        padding: 20px;
+        width: 95%;
+    }
+    #tasks {
+        width: 95%;
+    }
+    .task {
+        width: 200px;
+        height: 150px;
+    }
+}
