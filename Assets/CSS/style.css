@@ -101,16 +101,43 @@ header {
     padding: 20px;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .task {
     position: relative;
     width: 200px;
     height: 250px;
     background-image: url("/Assets/photos/notebg.png");
+    background-size: cover;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     overflow: hidden;
+    animation: fadeIn;
 }
+
+.task > div:nth-child(2){
+    flex-grow: 1;
+    overflow-y: auto; 
+    padding: 5px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5; 
+    word-wrap: break-word; 
+}
+
 img {
     position: absolute;
     top: 5px;
