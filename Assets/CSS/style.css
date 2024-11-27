@@ -2,7 +2,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    src: url(../fonts/Roboto-Regular.eot); /* For IE6-8 */
+    src: url(../fonts/Roboto-Regular.eot); 
     src: local('Roboto'),
         local('Roboto-Regular'),
         url(../fonts/Roboto-Regular.woff2) format('woff2'),
@@ -111,7 +111,7 @@ header {
     padding: 10px;
     overflow: hidden;
 }
-.delete-icon {
+#delete-icon {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -122,11 +122,11 @@ header {
     transition: transform 0.2s ease-in-out;
 }
 
-.task:hover .delete-icon {
+.task:hover #delete-icon {
     display: block;
 }
 
-.delete-icon:hover {
+#delete-icon:hover {
     transform: scale(1.2);
 }
 
