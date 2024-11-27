@@ -102,35 +102,32 @@ header {
 }
 
 .task {
-    background-image: url(/Assets/photos/notebg.png);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 200px; 
-    height: 250px; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
-    overflow: hidden;
+    width: 200px;
+    height: 250px;
+    background-image: url(/Assets/photos/notebg.png);
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    overflow: hidden;
 }
-
 .delete-icon {
     position: absolute;
-    top: 5px; 
-    right: 5px; 
-    font-size: 20px; 
-    color: red; 
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
     display: none;
-    transition: transform 0.2s ease-in-out; 
+    transition: transform 0.2s ease-in-out;
 }
 
 .task:hover .delete-icon {
-    display: block; 
+    display: block;
 }
 
 .delete-icon:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
 .task:hover {
