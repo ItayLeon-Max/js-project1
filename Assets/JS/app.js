@@ -16,7 +16,7 @@ generateHTML = (data) => {
     const newHTML = `
         <div class="task">
             <div>
-                <img src="assets/images/x.png" onclick="deleteTask(${data.index})" alt="Delete">
+                <img src="Assets/photos/trush.png" onclick="deleteTask(${data.index})" alt="Delete">
             </div>
             <div>${data.description}</div>
             <div>${data.date}</div>

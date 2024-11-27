@@ -44,7 +44,7 @@ header {
 #notebook {
     width: 100%;
     padding: 20px;
-    background-image: url(/Assets/photos/formbg.jpg);
+    background-image: url("/Assets/photos/formbg.jpg");
     border: 1px solid #a0522d;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -105,13 +105,13 @@ header {
     position: relative;
     width: 200px;
     height: 250px;
-    background-image: url(/Assets/photos/notebg.png);
+    background-image: url("/Assets/photos/notebg.png");
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
     overflow: hidden;
 }
-#delete-icon {
+img {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -122,11 +122,11 @@ header {
     transition: transform 0.2s ease-in-out;
 }
 
-.task:hover #delete-icon {
+.task:hover img {
     display: block;
 }
 
-#delete-icon:hover {
+img:hover {
     transform: scale(1.2);
 }
 
