@@ -22,8 +22,9 @@ body {
 }
 
 #grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
     align-items: center;
     width: 90%;
     max-width: 800px; 
@@ -125,7 +126,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    animation: fadeIn;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .task > div:nth-child(2){
